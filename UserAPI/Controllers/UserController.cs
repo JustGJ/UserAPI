@@ -1,4 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
+using System.Data;
+using UserAPI.Data;
 
 namespace UserAPI.Controllers
 {
@@ -6,14 +9,24 @@ namespace UserAPI.Controllers
     [Route("[controller]")]
     public class UserController : ControllerBase
     {
-       public UserController()
+       private readonly DataContextDapper _dapper;
+ 
+       public UserController(IConfiguration config)
        {
+           _dapper = new DataContextDapper(config);
        }
 
-        [HttpGet]
-        public string[] GetUsers()
+       [HttpGet("Test")]
+       
+       public DateTime TestConnection() 
         {
-            return new string[] { "User1, user2" };
+            return _dapper.LoadDataSingle<DateTime>("SELECT GETDATE()");
+        }
+
+       [HttpGet("GetUsers/{testValue}")]
+       public string[] GetUsers(string testValue)
+        {
+            return new string[] { "user1, user2", testValue };
         }
     }
 }
