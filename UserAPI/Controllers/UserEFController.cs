@@ -13,15 +13,13 @@ namespace UserAPI.Controllers
     public class UserEFController : ControllerBase
     {
         private readonly DataContextEF _entityFramework;
-        public readonly IMapper _mapper;
+        private readonly IMapper _mapper;
 
         public UserEFController(IConfiguration config)
         {
             _entityFramework = new DataContextEF(config);
             _mapper = new Mapper(new MapperConfiguration(cfg => {
                 cfg.CreateMap<UserToAddDto, User>();
-                cfg.CreateMap<UserSalary, UserSalary>().ReverseMap();
-                cfg.CreateMap<UserJobInfo, UserJobInfo>().ReverseMap();
             }));
         }
 
