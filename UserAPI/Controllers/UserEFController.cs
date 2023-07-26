@@ -12,8 +12,8 @@ namespace UserAPI.Controllers
     [Route("[controller]")]
     public class UserEFController : ControllerBase
     {
-        private readonly DataContextEF _entityFramework;
-        private readonly IMapper _mapper;
+        DataContextEF _entityFramework;
+        IMapper _mapper;
 
         public UserEFController(IConfiguration config)
         {
