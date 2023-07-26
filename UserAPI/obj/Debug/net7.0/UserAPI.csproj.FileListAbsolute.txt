@@ -67,3 +67,8 @@ C:\Users\jfgas\Desktop\Développement WEB\dotnet\UserAPI\UserAPI\bin\Debug\net7.
 C:\Users\jfgas\Desktop\Développement WEB\dotnet\UserAPI\UserAPI\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\jfgas\Desktop\Développement WEB\dotnet\UserAPI\UserAPI\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\jfgas\Desktop\Développement WEB\dotnet\UserAPI\UserAPI\bin\Debug\net7.0\Npgsql.dll
+C:\Users\jfgas\Desktop\Développement WEB\dotnet\UserAPI\UserAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\jfgas\Desktop\Développement WEB\dotnet\UserAPI\UserAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\jfgas\Desktop\Développement WEB\dotnet\UserAPI\UserAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\jfgas\Desktop\Développement WEB\dotnet\UserAPI\UserAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\jfgas\Desktop\Développement WEB\dotnet\UserAPI\UserAPI\bin\Debug\net7.0\AutoMapper.dll

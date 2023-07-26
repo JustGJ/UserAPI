@@ -18,13 +18,6 @@ namespace UserAPI.Controllers
            _dapper = new DataContextDapper(config);
        }
 
-       [HttpGet("Test")]
-       
-       public DateTime TestConnection() 
-        {
-            return _dapper.LoadDataSingle<DateTime>("SELECT GETDATE()");
-        }
-
        [HttpGet("GetUsers")]
        public IEnumerable<User> GetUsers()
         {
