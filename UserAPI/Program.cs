@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Builder;
+using UserAPI.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +25,8 @@ builder.Services.AddCors((options) =>
             .AllowCredentials();
     });
 });
+
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 var app = builder.Build();
 

@@ -1,8 +1,9 @@
-﻿using AutoMapper;
+﻿using System.Linq;
+using UserAPI.models;
 
 namespace UserAPI.Data
 {
-    public class UserRepository
+    public class UserRepository: IUserRepository
     {
         DataContextEF _entityFramework;
 
@@ -30,6 +31,47 @@ namespace UserAPI.Data
             {
                 _entityFramework.Remove(entityToAdd);
             }
+        }
+        public IEnumerable<User> GetUsers()
+        {
+            IEnumerable<User> users = _entityFramework.Users.ToList<User>();
+            return users;
+        }
+        public User GetUserSingle(int userId)
+        {
+            User? user = _entityFramework.Users
+                 .Where(u => u.UserId == userId)
+                 .FirstOrDefault<User>();
+
+            if (user != null)
+            {
+                return user;
+            }
+            throw new Exception("Failed to get user");
+        }
+        public UserSalary GetUserSingleSalary(int userId)
+        {
+            UserSalary? userSalary = _entityFramework.UserSalary
+                 .Where(u => u.UserId == userId)
+                 .FirstOrDefault<UserSalary>();
+
+            if (userSalary != null)
+            {
+                return userSalary;
+            }
+            throw new Exception("Failed to get user");
+        }
+        public UserJobInfo GetUserSingleJobInfo(int userId)
+        {
+            UserJobInfo? UserJobInfo = _entityFramework.UserJobInfo
+                 .Where(u => u.UserId == userId)
+                 .FirstOrDefault<UserJobInfo>();
+
+            if (UserJobInfo != null)
+            {
+                return UserJobInfo;
+            }
+            throw new Exception("Failed to get user");
         }
     }
 }
