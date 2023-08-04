@@ -72,3 +72,4 @@ C:\Users\jfgas\Desktop\Développement WEB\dotnet\UserAPI\UserAPI\bin\Debug\net7.
 C:\Users\jfgas\Desktop\Développement WEB\dotnet\UserAPI\UserAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\jfgas\Desktop\Développement WEB\dotnet\UserAPI\UserAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\jfgas\Desktop\Développement WEB\dotnet\UserAPI\UserAPI\bin\Debug\net7.0\AutoMapper.dll
+C:\Users\jfgas\Desktop\Développement WEB\dotnet\UserAPI\UserAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
